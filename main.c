@@ -59,6 +59,9 @@ int main(void) {
     TMR1_SetInterruptHandler(Tmr1_ISR);
     //TMR3_SetInterruptHandler(CAN_ISR);
     //CAN1_SetRxBufferInterruptHandler(&CAN_ISR);
+    
+    msg.msgId = 0x0000;
+    msg.data = data;
 
 
     while (1) {
@@ -370,8 +373,6 @@ void Tmr1_ISR(void) {
             StartRamp = 0;
 
     }
-    
-
 }
 
 
